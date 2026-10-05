@@ -1,10 +1,16 @@
 CHANGELOG
 =========
 
+0.2.2
+-----
+
+* Added `BadRequestException`.
+* Drop support PHP < 8.4.
+
 0.2.1
 -----
 
-* Added PHP 8.x
+* Added PHP 8.x.
 
 0.2.0
 -----
