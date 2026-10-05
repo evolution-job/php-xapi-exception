@@ -11,6 +11,8 @@
 
 namespace Xabbuh\XApi\Common\Exception;
 
+use Exception;
+
 /**
  * Exception indicating authentication or authorization failures.
  *
@@ -18,4 +20,8 @@ namespace Xabbuh\XApi\Common\Exception;
  */
 class AccessDeniedException extends XApiException
 {
+    public function __construct($message = '')
+    {
+        parent::__construct($message, 403);
+    }
 }

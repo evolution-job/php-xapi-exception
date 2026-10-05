@@ -11,6 +11,8 @@
 
 namespace Xabbuh\XApi\Common\Exception;
 
+use Exception;
+
 /**
  * Statement id already exists exception.
  *
@@ -18,8 +20,8 @@ namespace Xabbuh\XApi\Common\Exception;
  */
 class StatementIdAlreadyExistsException extends XApiException
 {
-    public function __construct($statementId, \Exception $previous = null)
+    public function __construct($statementId)
     {
-        parent::__construct(sprintf('A statement with ID "%s" already exists.', $statementId), 0, $previous);
+        parent::__construct(sprintf('A statement with ID "%s" already exists.', $statementId), 409);
     }
 }

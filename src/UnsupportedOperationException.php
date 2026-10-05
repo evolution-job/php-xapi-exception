@@ -18,4 +18,8 @@ namespace Xabbuh\XApi\Common\Exception;
  */
 class UnsupportedOperationException extends XApiException
 {
+    public function __construct($message = '')
+    {
+        parent::__construct($message, 405);
+    }
 }
