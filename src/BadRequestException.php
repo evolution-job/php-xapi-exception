@@ -11,17 +11,15 @@
 
 namespace Xabbuh\XApi\Common\Exception;
 
-use Exception;
-
 /**
- * Experience API exceptions.
+ * Exception indicating authentication or authorization failures.
  *
- * @author Christian Flothmann <christian.flothmann@xabbuh.de>
+ * @author Mathieu Boldo <mathieu.boldo@entrili.com>
  */
-class XApiException extends Exception
+class BadRequestException extends XApiException
 {
-    public function __construct(string $message, int $code = 400, ?Exception $previous = null)
+    public function __construct($message = '')
     {
-        parent::__construct($message, $code, $previous);
+        parent::__construct($message, 400);
     }
 }
